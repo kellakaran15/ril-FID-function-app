@@ -14,7 +14,7 @@ module.exports = async function (context, req) {
 
     const FIDInformation = await collection.updateOne({ id: req.body.caseId }, { $set: { "FIDInfo": FIDinfo } });
 
-    const taskList = await collection.updateOne({ id: req.body.caseId }, { $set: { "TaskList.1.Status": "completed" } });
+    //const taskList = await collection.updateOne({ id: req.body.caseId }, { $set: { "TaskList.1.Status": "completed" } });
 
     const responseMessage = FIDInformation;
 
