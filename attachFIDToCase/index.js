@@ -11,6 +11,7 @@ module.exports = async function (context, req) {
     const collection = db.collection('caseHeader');
 
     const FIDinfo = req.body.FIDInfo;
+    
 
     const FIDInformation = await collection.updateOne({ id: req.body.caseId }, { $set: { "FIDInfo": FIDinfo } });
 
